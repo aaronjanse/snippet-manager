@@ -8,7 +8,7 @@
   "author": {
     "name": "aaronduino",
     "email": "gitduino@gmail.com",
-    "url": "aaronduino.github.io/code-snippets"
+    "url": "github.com/aaronduino/code-snippets"
   },
   "scripts": {
     "test": "xo",

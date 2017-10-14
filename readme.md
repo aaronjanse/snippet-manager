@@ -5,6 +5,8 @@ After trying countless snippet managers, I've finally decided that what I need i
 
 The result? This.
 
+![screenshot](https://raw.githubusercontent.com/aaronduino/snippet-manager/master/screenshot.png)
+
 ## Development
 (you are going to do all the following in the `src/` directory)
 

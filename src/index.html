@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Snippet Tracker</title>
+
+	<script>
+		// fix js import stuff
+		if (typeof module === 'object') {
+			window.module = module;
+			module = undefined;
+		}
+	</script>
+
+	<link rel="stylesheet" href="photon-0.1.2-dist/css/photon.min.css">
+
+	<link rel="stylesheet" href="highlight/styles/atom-one-light.css">
+	<script src="highlight/highlight.pack.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<script src="https://unpkg.com/moonjs"></script>
+	<script src="https://unpkg.com/wade"></script>
+</head>
+
+<body>
+	<div class="window">
+		<div class="window-content">
+			<div class="pane-group">
+				<div class="pane-sm sidebar" id="snippet-sidebar">
+					<ul class="list-group">
+						<li class="list-group-header">
+							<input class="form-control" type="text" value="" placeholder="Search" m-model="query" m-on:input="search" id="search" />
+						</li>
+						<div id="snippet-list">
+							<li class="list-group-item choosable-list-item snippet-item" m-on:click="choose_snippet(snippet)" m-if="should_show(snippet)" m-for="snippet in snippets">
+								<span class="icon icon-clipboard snippet-item-icon" m-on:click="copy_text(event, snippet.contents)"></span>
+								<span class="icon icon-pencil edit-button snippet-item-icon" m-on:click="edit_snippet(snippet)"></span>
+								<span class="icon icon-check save-button snippet-item-icon" m-on:click="save_snippet(event, snippet)"></span>
+								<span class="icon icon-trash delete-button snippet-item-icon" m-on:click="delete_snippet(snippet)"></span>
+								<div class="media-body">
+									<span class="icon icon-code"></span>
+									<strong>{{snippet.title}}</strong>
+									<br>
+									<span class="icon icon-codeı" style="visibility: hidden;"></span> {{snippet.language}}
+								</div>
+							</li>
+							<li class="list-group-item choosable-list-item" m-on:click="add_snippet()">
+								<div class="media-body">
+									<span class="icon icon-plus"></span>
+									<h5 id="add-snippet-button">Add Snippet</h5>
+								</div>
+							</li>
+						</div>
+				</div>
+				<div class="pane" id="snippet-view-pane">
+					<input id="snippet-title" type="text" value="" readonly><br>
+					<input id="snippet-language" type="text" value="" readonly>
+					<div>
+						<pre id="code_render_pane"><code id="code_render" class="python"></code></pre>
+						<textarea id="code_editor" class="hljs"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+
+	<script>
+    // fix js import stuff
+		if (window.module) module = window.module;
+	</script>
+
+	<link rel="stylesheet" href="index.css">
+</body>
+
+</html>

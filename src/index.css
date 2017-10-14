@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans:300');
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: -apple-system, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+	position: absolute;
+	width: 500px;
+	height: 250px;
+	top: 50%;
+	left: 50%;
+	margin-top: -125px;
+	margin-left: -250px;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 60px;
+	font-weight: 100;
+	margin: 0;
+	padding: 0;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+code[contenteditable="true"]:focus {
+    outline: none;
+}
+
+.pane-sm {
+  width: 200px;
+  min-width: 200px;
+  overflow: auto;
+}
+
+#code_editor, #code_render {
+  font-size: 12px;
+  font-weight: 200;
+  font-family: 'Source Code Pro', monospace;
+  resize: none;
+  border: none;
+	padding: 0;
+  position: absolute;
+  width: 95%;
+  height: 80%;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-top: 0px;
+}
+
+code, #code_render * {
+  user-select: text;
+}
+
+#code_editor {
+  display: none;
+  margin-top: -13px;
+}
+
+.hljs {
+  background-color: #fff;
+}
+
+#snippet-view-pane {
+  padding: 10px;
+}
+
+#snippet-title, #snippet-language {
+  font-family: 'Comfortaa', cursive;
+}
+
+#snippet-title:read-only, #snippet-language:read-only {
+  border: none;
+}
+
+#snippet-title {
+  font-size: 2em;
+  width: 100%;
+}
+
+#snippet-language {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  position: relative;
+}
+
+#snippet-language:read-only {
+  left: 1.5px;
+}
+
+#snippet-list {
+  z-index: 4;
+  cursor: pointer;
+}
+
+#snippet-list:hover {
+  cursor: pointer;
+}
+
+#snippet-sidebar {
+  background-color: #fdfdfd;
+}
+
+.choosable-list-item {
+  background-color: #fdfdfd;
+  cursor: pointer;
+}
+
+.choosable-list-item:hover:not(.active) {
+  background-color: #eee;
+}
+
+.choosable-list-item:hover * {
+  cursor: pointer;
+}
+
+#add-snippet-button {
+  display: inline;
+}
+
+.snippet-item-icon {
+  float: right;
+  margin: 10px;
+  color: #eee;
+  z-index: 3;
+  pointer-events: all;
+}
+
+.snippet-item-icon:hover {
+  color: #aaa;
+}
+
+.snippet-item-icon:hover {
+  pointer-events: all;
+}
+
+.save-button, .delete-button {
+  display: none;
+}
+
+.delete-button:hover {
+  color: #ff4444;
+}
+
+.snippet-item.active > .edit-button {
+  display: inherit;
+}
+
+.snippet-item:not(.active) > .edit-button {
+  display: none;
+}
+
+.icon-clipboard {
+  color: #333;
+}
+
+.snippet-item.active>.icon-clipboard {
+  color: #eee;
+}
+
+.snippet-item.active > .icon-clipboard:hover {
+  color: #aaa;
+}
+
+.snippet-item:not(.active) > .icon-clipboard {
+  color: #333;
+}
+
+.snippet-item:not(.active) > .icon-clipboard:hover {
+  color: #ababab;
+}

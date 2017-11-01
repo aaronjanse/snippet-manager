@@ -5,6 +5,8 @@ let ipc = require('electron').ipcRenderer;
 let code_editor = document.getElementById('code_editor')
 let code_render = document.getElementById('code_render')
 
+let copy = require('copy-to-clipboard')
+
 code_render.innerText = code_editor.value
 hljs.highlightBlock(code_render);
 
@@ -233,7 +235,7 @@ const app = new Moon({
 		},
 		copy_text: function(event, text) {
 			event.stopPropagation()
-			console.log(text)
+			copy(text)
 		},
 	}
 });

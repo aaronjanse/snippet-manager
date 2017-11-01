@@ -25,6 +25,7 @@
     "electron"
   ],
   "dependencies": {
+    "copy-to-clipboard": "^3.0.8",
     "electron-debug": "^1.0.0"
   },
   "devDependencies": {

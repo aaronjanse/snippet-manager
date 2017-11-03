@@ -45,7 +45,7 @@ app.on('ready', () => {
 	mainWindow = createMainWindow();
 });
 
-let ipc = require('electron').ipcMain;
+const ipc = require('electron').ipcMain;
 
 ipc.on('get_snippets', (event, arg) => {
 	fs.readFile('snippets.json', 'utf8', function(err, data) {

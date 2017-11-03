@@ -1,5 +1,4 @@
 # code-snippets
-
 _The dead-simple snippet manager_
 
 [![Join the chat at https://gitter.im/snippet-manager/Lobby](https://badges.gitter.im/snippet-manager/Lobby.svg)](https://gitter.im/snippet-manager/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)

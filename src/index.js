@@ -46,17 +46,30 @@ app.on('ready', () => {
 });
 
 const ipc = require('electron').ipcMain;
+const path = require('path');
+
+const data_file_path = path.join(app.getPath('userData'), 'snippets.json');
 
 ipc.on('get_snippets', (event, arg) => {
-	fs.readFile('snippets.json', 'utf8', function(err, data) {
+	fs.readFile(data_file_path, 'utf8', function(err, data) {
 		if (err) {
-			return console.error();(err);
+			// try to recover existing snippet data from old version
+			fs.readFile('snippets.json', 'utf8', function(err_, data_) {
+				if (err_) {
+					event.returnValue = null;
+					return console.error();(err_);
+				} else {
+					fs.writeFile(data_file_path, data_, 'utf8', function(){});
+					event.returnValue = data_;
+				}
+			});
+		} else {
+			event.returnValue = data;
 		}
-    event.returnValue = data;
 	});
 });
 
 ipc.on('save_snippets', (event, snippets) => {
-	fs.writeFile('snippets.json', snippets, 'utf8', function(){});
+	fs.writeFile(data_file_path, snippets, 'utf8', function(){});
 	event.returnValue = 1; // Required for sendSync or it hangs forever! You can send back anything here.
 });

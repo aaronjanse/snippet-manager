@@ -1,4 +1,6 @@
 # code-snippets
+
+[![Join the chat at https://gitter.im/snippet-manager/Lobby](https://badges.gitter.im/snippet-manager/Lobby.svg)](https://gitter.im/snippet-manager/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 _The dead-simple snippet manager_
 
 After trying countless snippet managers, I've finally decided that what I need is something that is _fast_ (and _quick to use_), _dead simple_, and _reliable_.

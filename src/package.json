@@ -26,12 +26,12 @@
   ],
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
-    "electron-debug": "^1.0.0"
+    "electron-debug": "^1.4.0"
   },
   "devDependencies": {
-    "devtron": "^1.1.0",
+    "devtron": "^1.4.0",
+    "electron": "1.7.9",
     "electron-packager": "^8.0.0",
-    "electron": "^1.3.3",
     "xo": "^0.16.0"
   },
   "xo": {

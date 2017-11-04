@@ -1,7 +1,7 @@
 {
   "name": "code-snippets",
   "productName": "CodeSnippets",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A lightweight app to keep track of code snippets",
   "license": "MIT",
   "repository": "aaronduino/code-snippets",
@@ -26,7 +26,9 @@
   ],
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
-    "electron-debug": "^1.4.0"
+    "electron-debug": "^1.4.0",
+    "electron-updater": "^2.16.1",
+    "yarn": "^1.2.1"
   },
   "devDependencies": {
     "devtron": "^1.4.0",

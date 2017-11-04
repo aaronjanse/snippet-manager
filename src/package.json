@@ -14,7 +14,7 @@
     "test": "xo",
     "start": "electron .",
     "build": "electron-packager . --out=../dist --asar --overwrite --all",
-    "publish": "build -p always"
+    "publish": "build  --mac --win --linux -p always"
   },
   "files": [
     "index.js",
@@ -46,6 +46,9 @@
     ]
   },
   "build": {
-    "appId": "com.github.aaronduino.snippetmanager"
+    "appId": "com.github.aaronduino.snippetmanager",
+    "directories": {
+      "output": "../dist"
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "code-snippets",
   "productName": "CodeSnippets",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A lightweight app to keep track of code snippets",
   "license": "MIT",
   "repository": "aaronduino/snippet-manager",

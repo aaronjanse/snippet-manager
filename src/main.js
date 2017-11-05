@@ -78,7 +78,7 @@ const app = new Moon({
 	hooks: {
 		init: function() {
 			this.callMethod('update_search_index')
-			this.set('snippets', JSON.parse(ipc.sendSync('get_snippets')))
+			this.set('snippets', JSON.parse(ipc.sendSync('get_snippets')) || this.get('snippets'))
 		},
 		mounted: function() {
 			$('#search').val('')

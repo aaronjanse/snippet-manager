@@ -1,19 +1,20 @@
 {
   "name": "code-snippets",
   "productName": "CodeSnippets",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "description": "A lightweight app to keep track of code snippets",
   "license": "MIT",
-  "repository": "aaronduino/code-snippets",
+  "repository": "aaronduino/snippet-manager",
   "author": {
     "name": "aaronduino",
     "email": "gitduino@gmail.com",
-    "url": "github.com/aaronduino/code-snippets"
+    "url": "github.com/aaronduino/snippet-manager"
   },
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . --out=../dist --asar --overwrite --all"
+    "build": "electron-packager . --out=../dist --asar --overwrite --all",
+    "publish": "build  --mac --win --linux -p always"
   },
   "files": [
     "index.js",
@@ -26,12 +27,15 @@
   ],
   "dependencies": {
     "copy-to-clipboard": "^3.0.8",
-    "electron-debug": "^1.0.0"
+    "electron-debug": "^1.4.0",
+    "electron-log": "^1.3.0",
+    "electron-updater": "^2.16.1"
   },
   "devDependencies": {
-    "devtron": "^1.1.0",
+    "devtron": "^1.4.0",
+    "electron": "1.7.9",
     "electron-packager": "^8.0.0",
-    "electron": "^1.3.3",
+    "electron-builder": "^19.43.3",
     "xo": "^0.16.0"
   },
   "xo": {
@@ -40,5 +44,11 @@
       "node",
       "browser"
     ]
+  },
+  "build": {
+    "appId": "com.github.aaronduino.snippetmanager",
+    "directories": {
+      "output": "../dist"
+    }
   }
 }

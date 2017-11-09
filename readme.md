@@ -9,6 +9,10 @@ The result? This.
 
 ![screenshot](https://raw.githubusercontent.com/aaronduino/snippet-manager/master/screenshot.png)
 
+## Download/Install
+Download the appropriate file from the [releases tab](https://github.com/aaronduino/snippet-manager/releases/) to run and install.
+
+
 ## Development
 (you are going to do all the following in the `src/` directory)
 

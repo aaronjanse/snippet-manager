@@ -243,6 +243,9 @@ const app = new Moon({
 window.addEventListener('beforeunload', function(e) {
 	const existing_snippets = app.get('snippets').filter(function(s) {
 		return !s.deleted
-	});
+	}).map(snippet => {
+		snippet.shown = true;
+		return snippet
+	})
 	ipc.sendSync('save_snippets', JSON.stringify(existing_snippets))
 });
